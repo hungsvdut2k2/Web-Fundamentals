@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        min-height: 100vh;
+        overflow: hidden;
+      }
+
+      .sidebar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        list-style-type: none;
+        font-size: 1.5em;
+      }
+
+      .sidebar__item a {
+        cursor: pointer;
+        transition: 0.3s all ease;
+        color: #274546;
+        text-decoration: none;
+      }
+      .sidebar__item a:hover {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="sidebar">
+      <li class="sidebar__item">
+        <a href="./T3.html" target="T3">Trang chủ</a>
+      </li>
+      <li class="sidebar__item">
+        <a href="employee\index.php" target="T3">Nhan Vien</a>
+      </li>
+      <li class="sidebar__item">
+        <a href="departure\index.php" target="T3">Phong Ban</a>
+      </li>
+
+      <li class="sidebar__item">
+        <a href="employee/departure.php" target="T3"
+          >Nhan Vien Trong Phong Ban</a
+        >
+      </li>
+    </ul>
+  </body>
+</html>
