@@ -9,30 +9,18 @@
 </head>
 
 <body>
-    <form method="post">
-        <input type="number" name="departure-id" placeholder="Enter Departure Id">
-        <input type="submit" name="submit-btn" value="submit">
-    </form>
-
     <?php
-        include 'C:\xampp\htdocs\CNWeb\db_connection.php';
+        include '/opt/lampp/htdocs/employee-management/db_connection.php';
+        $idpb=(int)$_REQUEST['IDPB'];
         $conn = OpenCon();
-        if (isset($_POST["submit-btn"])) {
-        $departure_id = (int)$_POST['departure-id'];
-        
-        $query = "SELECT * FROM nhanvien WHERE IDPB = $departure_id";
+        $query = "SELECT * FROM nhanvien WHERE IDPB = $idpb";
         $result = $conn -> query($query);
 
         echo "<table border='1'>
-
         <tr>
-
         <th>Id</th>
-
         <th>Name</th>
-
         <th>Departure</th>
-
         <th>Address</th>
         
         </tr>";
@@ -55,7 +43,6 @@
     }
 
     echo "</table>";
-    }
         CloseCon($conn);
     ?>
 </body>

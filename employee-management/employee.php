@@ -10,22 +10,17 @@
 
 <body>
     <?php
-        include 'C:\xampp\htdocs\CNWeb\db_connection.php';
+        include '/opt/lampp/htdocs/employee-management/db_connection.php';
         $conn = OpenCon();
         $query = "SELECT * FROM nhanvien";
 
         $result = $conn -> query($query);
 
         echo "<table border='1'>
-
         <tr>
-
         <th>Id</th>
-
         <th>Name</th>
-
         <th>Departure</th>
-
         <th>Address</th>
         
         </tr>";

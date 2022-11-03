@@ -9,37 +9,31 @@
 </head>
 
 <body>
-
     <?php
-        include 'C:\xampp\htdocs\CNWeb\db_connection.php';
+        include '/opt/lampp/htdocs/employee-management/db_connection.php';
         $conn = OpenCon();
         $query = "SELECT * FROM phongban";
         $result = $conn -> query($query);
         
         echo "<table border='1'>
-
         <tr>
-
         <th>Id</th>
-
         <th>Name</th>
-
         <th>Description</th>
-        
+        <th>Employee</th>
         </tr>";
 
 
         while($row = $result->fetch_assoc()) 
         {
-            echo "<tr>";
-
-            echo "<td>" . $row['IDPB'] . "</td>";
-
-            echo "<td>" . $row['TenPB'] . "</td>";
-
-            echo "<td>" . $row['MoTa'] . "</td>";
-
-            echo "</tr>";
+            echo '<tr>
+            <td>'.$row['IDPB'].'</td>
+            <td>'.$row['TenPB'].'</td>
+            <td>'.$row['MoTa'].'</td>
+            <td align="center">
+            <a href="./employee_in_departure.php?IDPB='.$row['IDPB'].'">View</a>
+            </td>
+            </tr>';
         }
 
     echo "</table>";
