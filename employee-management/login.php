@@ -50,7 +50,7 @@
             $result = $conn -> query($query);
             CloseCon($conn);
             if(mysqli_num_rows($result) > 0) {
-                header('location:admin.php');
+                header('location:admin/admin.php');
             }
         }
     ?>
